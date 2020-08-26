@@ -51,7 +51,7 @@ RCT_EXPORT_METHOD(
   @try {
     initializePromiseResolve = resolve;
     initializePromiseReject = reject;
-
+    [[[MobileRTC sharedRTC] getMeetingSettings] disableShowVideoPreviewWhenJoinMeeting:true];
     MobileRTCSDKInitContext *context = [[MobileRTCSDKInitContext alloc] init];
     context.domain = webDomain;
     context.enableLog = YES;
